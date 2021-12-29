@@ -44,9 +44,12 @@ browser.get("https://www.fdmealplanner.com/#woodbridge")
 text_input = WebDriverWait(browser, 20).until(
     EC.presence_of_element_located((By.CSS_SELECTOR, "#location_9"))).click()
 
+covid_notification_button = WebDriverWait(browser, 20).until(EC.presence_of_element_located(
+    (By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div[1]/div/div[3]/div[2]/div/div/div/button"))).click()
 
 lunch_button = WebDriverWait(browser, 20).until(
     EC.presence_of_element_located((By.CSS_SELECTOR, "#applicationHost > div > div.menuPlanner.notranslate > div > div.page-host > div > div:nth-child(1) > div > div.mealViewerScreen > div.bg-new > div:nth-child(2) > div:nth-child(2) > div > div > div.bg-blk3 > div > div:nth-child(2)"))).click()
+
 
 view_menu = WebDriverWait(browser, 20).until(
     EC.presence_of_element_located((By.CSS_SELECTOR, "#viewmpMenu"))).click()
